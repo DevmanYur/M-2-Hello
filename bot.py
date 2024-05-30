@@ -31,7 +31,7 @@ def get_notification(tg_bot, chat_id):
             now = datetime.now()
             current_time = now.strftime("%H:%M")
             time.sleep(1)
-            if current_time == '16:40':
+            if current_time == '16:43':
                 yriy_list_good_random = random.choice(yriy_list_good)
                 yriy_list_trigger_random = random.choice(yriy_list_trigger)
                 text = (f'Доброе утро! \n'
