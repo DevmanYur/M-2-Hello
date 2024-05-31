@@ -31,16 +31,16 @@ def get_notification(tg_bot, chat_id):
             now = datetime.now()
             current_time = now.strftime("%H:%M")
             time.sleep(1)
-            # if current_time == '16:48':
-            yriy_list_good_random = random.choice(yriy_list_good)
-            yriy_list_trigger_random = random.choice(yriy_list_trigger)
-            text = (f'Доброе утро! \n'
-                    f'\n'
-                    f'Юрию \n'
-                    f'  нравится {yriy_list_good_random}\n'
-                    f'  не нравится {yriy_list_trigger_random}\n')
-            tg_bot.send_message(chat_id=chat_id, text=text)
-            time.sleep(5)
+            if current_time == '08:30':
+                yriy_list_good_random = random.choice(yriy_list_good)
+                yriy_list_trigger_random = random.choice(yriy_list_trigger)
+                text = (f'Доброе утро! \n'
+                        f'\n'
+                        f'Юрию \n'
+                        f'  нравится {yriy_list_good_random}\n'
+                        f'  не нравится {yriy_list_trigger_random}\n')
+                tg_bot.send_message(chat_id=chat_id, text=text)
+                time.sleep(36000)
         except requests.exceptions.ReadTimeout:
             logger.info("Истекло время тайм-аута")
             continue
